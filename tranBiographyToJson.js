@@ -7,10 +7,10 @@ var xmlContent = fs.readFileSync("./biography.xml","utf8");
 
 var splitContent = function(content) { 
 	var divisions = content.replace(/<division>/g,"~~~<division>").split("~~~");
-    for (var i = 1; i < divisions.length; i++) {
-    	divisions[i] = divisions[i].replace(/<sutra>/g,"###<sutra>").split("###");
-    };
-    return divisions;
+	for (var i = 1; i < divisions.length; i++) {
+		divisions[i] = divisions[i].replace(/<sutra>/g,"###<sutra>").split("###");
+	};
+	return divisions;
 }
 
 var createSutraObject = function(str) {
@@ -42,7 +42,7 @@ var createSutraArr = function(arr) {
 var createFinalObj = function(arr) {
 	var finalobj = {};
 	finalobj["categoryName"] = category;
-    var divisions = [];
+	var divisions = [];
 	for (var i = 1; i < arr.length; i++) {
 		var division = {};
 		var regex = new RegExp("<" + divisionTag + ">(.+)</" + divisionTag + ">");
