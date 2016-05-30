@@ -1,6 +1,6 @@
 var category = "Lijiang";
 var divisionTag = "division"; //<division> or <division1>, there's a Sanskrit name in <division1> tag; 
-var sutraProps = ["vol", "page", "tname", "aname", "sname", "cname", "homage", "subject", "yana", "chakra", "location", "audience", "aurthor", "requester", "dharma", "purpose", "collect", "bampo", "relation", "debate", "translator", "reviser"]; //set props in sutra obj;
+var sutraProps = ["vol", "page", "tname", "aname", "sname", "cname", "homage", "subject", "yana", "chakra", "location", "audience", "author", "requester", "dharma", "purpose", "collect", "bampo", "relation", "debate", "translator", "reviser"]; //set props in sutra obj;
 
 var fs = require("fs");
 var xmlContent = fs.readFileSync("./biography.xml","utf8");
